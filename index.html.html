@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #202124;
+    margin: 0;
+    padding: 0;
+}
+/* Barra de navegación superior (simulación) */
+.topnav {
+    text-align: right;
+    padding: 10px 20px;
+}
+.topnav a {
+    color: #5f6368;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+/* Banner de publicidad simulado */
+.banner-ad {
+    text-align: center;
+    background: #f1f3f4;
+    color: #5f6368;
+    padding: 8px 0;
+    font-size: 14px;
+}
+/* Contenedor del logo de Google */
+.logocontainer {
+    text-align: center;
+    margin-top: 50px;
+}
+.logo {
+    font-size: 80px;
+    font-weight: bold;
+    margin: 0;
+}
+/* Estilo de los campos de texto */
+.input-container {
+    text-align: center;
+    margin-top: 30px;
+}
+.input-container input {
+    width: 300px;
+    height: 36px;
+    padding: 0 12px;
+    margin: 6px 0;
+    border: 1px solid #dfe1e5;
+    border-radius: 18px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+/* Estilo del botón */
+.btn {
+    margin-top: 15px;
+    padding: 0 18px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #3c4043;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+}
+.btn:active {
+    background-color: #f1f3f4;
+}
+/* Resultado de la interacción */
+#resultado {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #202124;
+}
+/* Pie de página simulado */
+.footer {
+    text-align: center;
+    color: #5f6368;
+    font-size: 12px;
+    margin-top: 40px;
+    padding: 20px 0;
+    background: #f2f2f2;
+    width: 100%;
+}
+.footer a {
+    color: #5f6368;
+    text-decoration: none;
+    margin: 0 8px;
+}
+</style>
+</head>
+<body>
+  <div class="topnav">
+    <a href="#">Gmail</a>
+    <a href="#">Imágenes</a>
+  </div>
+  <div class="banner-ad">Publicidad: ¡Compra ya y ahorra!</div>
+  <div class="logocontainer">
+    <h1 class="logo">
+      <span style="color:#4285F4;">G</span>
+      <span style="color:#EA4335;">o</span>
+      <span style="color:#FBBC05;">o</span>
+      <span style="color:#4285F4;">g</span>
+      <span style="color:#34A853;">l</span>
+      <span style="color:#EA4335;">e</span>
+    </h1>
+  </div>
+  <div class="input-container">
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+    <input type="text" id="peso" placeholder="Ingresa tu peso">
+    <br>
+    <button class="btn" onclick="mostrarPeso()">Ver peso</button>
+    <div id="resultado"></div>
+  </div>
+  <div class="footer">
+    <a href="#">Privacidad</a> - <a href="#">Términos</a> - <a href="#">Configuración</a>
+  </div>
+<script>
+function mostrarPeso() {
+    var nombre = document.getElementById('nombre').value;
+    var peso = document.getElementById('peso').value;
+    var resultado = document.getElementById('resultado');
+    if (nombre && peso) {
+        resultado.textContent = 'Te llamas ' + nombre + ' y pesas ' + peso;
+    } else {
+        resultado.textContent = '';
+    }
+}
+</script>
+</body>
+</html>
